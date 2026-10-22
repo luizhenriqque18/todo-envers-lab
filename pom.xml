@@ -8,9 +8,9 @@
     <relativePath/>
   </parent>
   <groupId>br.com.laboratorio</groupId>
-  <artifactId>todo-api</artifactId>
+  <artifactId>todo-envers-lab</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>todo-api</name>
+  <name>todo-envers-lab</name>
   <description>Laboratório de auditoria com Hibernate Envers e PostgreSQL</description>
   <properties><java.version>21</java.version></properties>
   <dependencies>

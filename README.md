@@ -1,4 +1,4 @@
-# ToDo — laboratório Hibernate Envers
+# todo-envers-lab — laboratório Hibernate Envers
 
 Projeto de estudo para discutir auditoria de entidades com exemplos reproduzíveis em Spring Boot e PostgreSQL.
 
