@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratório Envers · Tarefas</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><span class="marca">TODO / AUDITORIA</span><h1>Laboratório Envers</h1>
+    <p>Altere uma tarefa e acompanhe as revisões salvas no PostgreSQL.</p>
+  </header>
+  <main>
+    <section class="painel" aria-labelledby="editor-titulo">
+      <h2 id="editor-titulo">Nova tarefa</h2>
+      <form id="formulario">
+        <label for="autor">Autor do experimento</label>
+        <input id="autor" maxlength="100" value="Ana" required>
+        <p class="ajuda">Identidade simulada, informada manualmente. Esta tela não realiza login.</p>
+        <label for="titulo">Título</label><input id="titulo" maxlength="150" required>
+        <label for="descricao">Descrição</label><textarea id="descricao" maxlength="2000" rows="3"></textarea>
+        <label class="linha"><input id="concluida" type="checkbox"> Concluída</label>
+        <div class="acoes"><button type="submit" id="salvar">Criar tarefa</button>
+          <button type="button" id="cancelar" class="secundario" hidden>Cancelar edição</button></div>
+      </form>
+    </section>
+    <section class="painel" aria-labelledby="lista-titulo">
+      <div class="linha topo"><h2 id="lista-titulo">Tarefas atuais</h2><button id="atualizar" class="secundario">Atualizar</button></div>
+      <p id="mensagem" role="status" aria-live="polite"></p>
+      <div id="tarefas"></div>
+      <div class="acoes"><button id="anterior" class="secundario">Anterior</button><span id="pagina"></span><button id="proxima" class="secundario">Próxima</button></div>
+    </section>
+    <section class="painel historico" aria-labelledby="historico-titulo">
+      <h2 id="historico-titulo">Histórico de revisões</h2>
+      <form id="buscar-historico" class="linha">
+        <label for="id-historico">ID da tarefa, inclusive excluída</label>
+        <input id="id-historico" type="number" min="1" step="1" required>
+        <button type="submit" class="secundario">Consultar</button>
+      </form>
+      <p class="ajuda">A revisão agrupa mudanças da mesma transação. Os campos modificados são apresentados nas alterações.</p>
+      <div id="revisoes" aria-live="polite"><p>Selecione “Histórico” em uma tarefa para começar.</p></div>
+      <div class="acoes" id="paginacao-historico" hidden><button id="historico-anterior" class="secundario">Anterior</button><span id="historico-pagina"></span><button id="historico-proxima" class="secundario">Próxima</button></div>
+    </section>
+  </main>
+  <footer>Experimente criar → editar → concluir → excluir → consultar o histórico.</footer>
+</body>
+</html>
