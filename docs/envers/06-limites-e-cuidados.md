@@ -4,7 +4,7 @@
 
 ## Parta dos caminhos de escrita
 
-O [TarefaService](../../../src/main/java/br/com/laboratorio/todo/tarefa/TarefaService.java) carrega entidades gerenciadas para atualizar ou remover. O [teste `sqlDiretoAlteraEstadoAtualSemGerarAuditoria`](../../../src/test/java/br/com/laboratorio/todo/AuditoriaIntegrationTest.java) utiliza outro caminho: um `UPDATE` por `JdbcTemplate`.
+O [TarefaService](../../src/main/java/br/com/laboratorio/todo/tarefa/TarefaService.java) carrega entidades gerenciadas para atualizar ou remover. O [teste `sqlDiretoAlteraEstadoAtualSemGerarAuditoria`](../../src/test/java/br/com/laboratorio/todo/AuditoriaIntegrationTest.java) utiliza outro caminho: um `UPDATE` por `JdbcTemplate`.
 
 Nesse teste, o título atual passa de “Original” para “SQL direto”, enquanto o histórico continua com um único snapshot, “Original”. Essa diferença é o exemplo mais importante deste tópico.
 
@@ -45,7 +45,7 @@ Essas consultas apenas exibem estados; se a tarefa foi alterada só pelos caminh
 
 Para o sistema real, liste primeiro todas as origens de escrita. Se todas puderem passar por um fluxo Hibernate controlado, avalie o Envers nesse contexto. Se for obrigatório observar escritas externas, será necessário avaliar mecanismos complementares, como captura no banco ou CDC. A escolha depende do requisito; esta base não compara essas soluções.
 
-Auditar acesso, provar autoria, proteger o histórico contra adulteração e restaurar registros são requisitos adicionais. O [autor simulado](../05-autoria-e-metadados/README.md) e os snapshots atuais não demonstram essas capacidades.
+Auditar acesso, provar autoria, proteger o histórico contra adulteração e restaurar registros são requisitos adicionais. O [autor simulado](05-autoria-e-metadados.md) e os snapshots atuais não demonstram essas capacidades.
 
 ## Exercício de decisão
 
@@ -60,4 +60,4 @@ Escreva uma lista das origens de alteração do sistema que você pretende discu
 - [Basics: eventos de persistência e limitação das operações em massa](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-basics).
 - [Entidade de revisão personalizada](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-revisionlog).
 
-[Anterior](../05-autoria-e-metadados/README.md) · [Índice](../README.md) · [Próximo: estratégias](../07-estrategias-de-auditoria/README.md)
+[Anterior](05-autoria-e-metadados.md) · [Índice](README.md) · [Próximo: estratégias](07-estrategias-de-auditoria.md)

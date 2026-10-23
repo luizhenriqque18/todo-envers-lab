@@ -4,9 +4,9 @@
 
 ## Comece pela unidade de trabalho
 
-Na tela atual, criar, editar e excluir fazem requisições separadas. Cada escrita entra em um método transacional de [TarefaService](../../../src/main/java/br/com/laboratorio/todo/tarefa/TarefaService.java). Por isso, normalmente observamos uma revisão por ação que efetivamente muda dados auditados.
+Na tela atual, criar, editar e excluir fazem requisições separadas. Cada escrita entra em um método transacional de [TarefaService](../../src/main/java/br/com/laboratorio/todo/tarefa/TarefaService.java). Por isso, normalmente observamos uma revisão por ação que efetivamente muda dados auditados.
 
-Mas a unidade que explica a revisão é a **transação**, e não o clique. O [teste de duas tarefas](../../../src/test/java/br/com/laboratorio/todo/AuditoriaIntegrationTest.java) envolve duas chamadas do serviço em um `TransactionTemplate` externo. Elas participam da mesma transação e a última revisão de cada tarefa tem o mesmo número.
+Mas a unidade que explica a revisão é a **transação**, e não o clique. O [teste de duas tarefas](../../src/test/java/br/com/laboratorio/todo/AuditoriaIntegrationTest.java) envolve duas chamadas do serviço em um `TransactionTemplate` externo. Elas participam da mesma transação e a última revisão de cada tarefa tem o mesmo número.
 
 | Cenário no laboratório | Resultado coberto por teste existente |
 |---|---|
@@ -73,4 +73,4 @@ Os números são ilustrativos. Explique a resposta a partir do limite da transa�
 - [Understanding the Envers Schema](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-schema).
 - [Configuração de exclusão](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-configuration).
 
-[Anterior](../02-mapeamento-e-tabelas/README.md) · [Índice](../README.md) · [Próximo: consultas](../04-consulta-do-historico/README.md)
+[Anterior](02-mapeamento-e-tabelas.md) · [Índice](README.md) · [Próximo: consultas](04-consulta-do-historico.md)

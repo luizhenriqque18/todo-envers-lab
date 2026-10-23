@@ -4,7 +4,7 @@
 
 ## A consulta implementada
 
-O [HistoricoService](../../../src/main/java/br/com/laboratorio/todo/audit/HistoricoService.java) usa um `EntityManager` dentro de transação de leitura:
+O [HistoricoService](../../src/main/java/br/com/laboratorio/todo/audit/HistoricoService.java) usa um `EntityManager` dentro de transação de leitura:
 
 ```java
 AuditReaderFactory.get(entityManager).createQuery()
@@ -32,7 +32,7 @@ Considere este exemplo hipotético: a tarefa A muda nas revisões 10 e 12; a tar
 | A tarefa A foi alterada exatamente na revisão 11? | Não há evento de A nessa revisão |
 | Como estava A quando ocorreu a revisão 11? | Estado de A que começou na revisão 10 |
 
-**Implementado:** `GET /api/tarefas/{id}/historico/{revisao}` filtra igualdade de revisão. No primeiro caso retorna 404. O [teste `revisaoExataNaoRetornaEstadoDeOutraRevisao`](../../../src/test/java/br/com/laboratorio/todo/AuditoriaIntegrationTest.java) verifica essa distinção no contrato atual.
+**Implementado:** `GET /api/tarefas/{id}/historico/{revisao}` filtra igualdade de revisão. No primeiro caso retorna 404. O [teste `revisaoExataNaoRetornaEstadoDeOutraRevisao`](../../src/test/java/br/com/laboratorio/todo/AuditoriaIntegrationTest.java) verifica essa distinção no contrato atual.
 
 **Proposto:** consulta do estado vigente com `AuditReader.find`. Exemplo para um futuro método transacional, com `id` e `numeroRevisao` recebidos como parâmetros:
 
@@ -82,4 +82,4 @@ Um próximo experimento pode filtrar `AuditEntity.property("titulo").hasChanged(
 - [Filtro por propriedade modificada](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-tracking-properties-changes-queries).
 - [Configuração da correspondência de revisão](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-configuration).
 
-[Anterior](../03-transacoes-e-revisoes/README.md) · [Índice](../README.md) · [Próximo: autoria](../05-autoria-e-metadados/README.md)
+[Anterior](03-transacoes-e-revisoes.md) · [Índice](README.md) · [Próximo: autoria](05-autoria-e-metadados.md)

@@ -26,11 +26,11 @@ Ter histórico não resolve a disputa entre dois usuários que editaram o mesmo 
 
 ## Onde observar no código
 
-- [Tarefa.java](../../../src/main/java/br/com/laboratorio/todo/tarefa/Tarefa.java): entidade auditada com `@Audited(withModifiedFlag = true)`.
-- [TarefaService.java](../../../src/main/java/br/com/laboratorio/todo/tarefa/TarefaService.java): alterações do estado atual.
-- [HistoricoService.java](../../../src/main/java/br/com/laboratorio/todo/audit/HistoricoService.java): leitura dos snapshots sem alterar a tarefa.
+- [Tarefa.java](../../src/main/java/br/com/laboratorio/todo/tarefa/Tarefa.java): entidade auditada com `@Audited(withModifiedFlag = true)`.
+- [TarefaService.java](../../src/main/java/br/com/laboratorio/todo/tarefa/TarefaService.java): alterações do estado atual.
+- [HistoricoService.java](../../src/main/java/br/com/laboratorio/todo/audit/HistoricoService.java): leitura dos snapshots sem alterar a tarefa.
 
-**Implementado:** estado atual e histórico. **Teste existente:** `crudHttpRegistraAutorCamposEExclusaoComSnapshot`, em [AuditoriaIntegrationTest](../../../src/test/java/br/com/laboratorio/todo/AuditoriaIntegrationTest.java).
+**Implementado:** estado atual e histórico. **Teste existente:** `crudHttpRegistraAutorCamposEExclusaoComSnapshot`, em [AuditoriaIntegrationTest](../../src/test/java/br/com/laboratorio/todo/AuditoriaIntegrationTest.java).
 
 ## Experimento
 
@@ -39,7 +39,7 @@ Ter histórico não resolve a disputa entre dois usuários que editaram o mesmo 
 3. Conclua a tarefa pelo botão da tela.
 4. Consulte o histórico e compare os três snapshots com a lista atual.
 
-No `psql`, configure o ID conforme o [guia de entrada](../README.md) e execute:
+No `psql`, configure o ID conforme o [guia de entrada](README.md) e execute:
 
 ```sql
 SELECT id, titulo, concluida FROM tarefa WHERE id = :id_tarefa;
@@ -64,4 +64,4 @@ Você entendeu quando consegue separar rastreabilidade do passado e tratamento d
 - [Envers — Basics](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-basics).
 - [Configuração: campo de concorrência otimista](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-configuration).
 
-[Índice](../README.md) · [Próximo: mapeamento e tabelas](../02-mapeamento-e-tabelas/README.md)
+[Índice](README.md) · [Próximo: mapeamento e tabelas](02-mapeamento-e-tabelas.md)

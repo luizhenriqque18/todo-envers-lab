@@ -20,11 +20,11 @@ O desenho representa vínculos lógicos. `tarefa_aud.id` não tem chave estrange
 | `titulo_mod`, `concluida_mod` | Indicadores usados para identificar mudanças |
 | `revisao` | Entidade personalizada de metadados; substitui a tabela padrão `REVINFO` |
 
-Veja a [entidade Tarefa](../../../src/main/java/br/com/laboratorio/todo/tarefa/Tarefa.java), a [entidade Revisao](../../../src/main/java/br/com/laboratorio/todo/audit/Revisao.java) e a [migração V1](../../../src/main/resources/db/migration/V1__tarefas_e_auditoria.sql).
+Veja a [entidade Tarefa](../../src/main/java/br/com/laboratorio/todo/tarefa/Tarefa.java), a [entidade Revisao](../../src/main/java/br/com/laboratorio/todo/audit/Revisao.java) e a [migração V1](../../src/main/resources/db/migration/V1__tarefas_e_auditoria.sql).
 
 ## Configuração que já existe
 
-Em [application.properties](../../../src/main/resources/application.properties):
+Em [application.properties](../../src/main/resources/application.properties):
 
 ```properties
 spring.jpa.hibernate.ddl-auto=validate
@@ -77,4 +77,4 @@ Não edite a V1 de um banco já migrado para evoluir o modelo. Crie uma nova mig
 - [Configuration Properties](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-configuration).
 - [Understanding the Envers Schema](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-schema).
 
-[Anterior](../01-fundamentos/README.md) · [Índice](../README.md) · [Próximo: transações](../03-transacoes-e-revisoes/README.md)
+[Anterior](01-fundamentos.md) · [Índice](README.md) · [Próximo: transações](03-transacoes-e-revisoes.md)

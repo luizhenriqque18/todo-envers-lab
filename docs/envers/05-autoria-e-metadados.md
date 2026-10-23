@@ -19,10 +19,10 @@ flowchart LR
 
 | Código | Papel no ToDo |
 |---|---|
-| [AutorAuditoriaFilter](../../../src/main/java/br/com/laboratorio/todo/audit/AutorAuditoriaFilter.java) | Valida formato do cabeçalho e define o contexto |
-| [AutorAuditoria](../../../src/main/java/br/com/laboratorio/todo/audit/AutorAuditoria.java) | Guarda temporariamente o autor em `ThreadLocal` |
-| [RevisaoListener](../../../src/main/java/br/com/laboratorio/todo/audit/RevisaoListener.java) | Copia o autor atual para a entidade de revisão |
-| [Revisao](../../../src/main/java/br/com/laboratorio/todo/audit/Revisao.java) | Mapeia `id`, `instante` e `autor` no banco |
+| [AutorAuditoriaFilter](../../src/main/java/br/com/laboratorio/todo/audit/AutorAuditoriaFilter.java) | Valida formato do cabeçalho e define o contexto |
+| [AutorAuditoria](../../src/main/java/br/com/laboratorio/todo/audit/AutorAuditoria.java) | Guarda temporariamente o autor em `ThreadLocal` |
+| [RevisaoListener](../../src/main/java/br/com/laboratorio/todo/audit/RevisaoListener.java) | Copia o autor atual para a entidade de revisão |
+| [Revisao](../../src/main/java/br/com/laboratorio/todo/audit/Revisao.java) | Mapeia `id`, `instante` e `autor` no banco |
 
 O filtro usa `finally` para remover o contexto após a requisição. Não trate esse `ThreadLocal` como transporte automático de identidade entre tarefas assíncronas ou outras threads; essa extensão precisaria de uma solução própria e testes.
 
@@ -75,4 +75,4 @@ Sua explicação deve identificar a origem do valor e o que falta para torná-la
 
 - [Revision Log e entidade personalizada](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-revisionlog).
 
-[Anterior](../04-consulta-do-historico/README.md) · [Índice](../README.md) · [Próximo: limites](../06-limites-e-cuidados/README.md)
+[Anterior](04-consulta-do-historico.md) · [Índice](README.md) · [Próximo: limites](06-limites-e-cuidados.md)

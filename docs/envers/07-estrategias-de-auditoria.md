@@ -4,7 +4,7 @@
 
 ## O ponto de partida do laboratório
 
-A configuração atual não define `org.hibernate.envers.audit_strategy`. Assim, usa a estratégia padrão da série 6.6, `DefaultAuditStrategy`. A [migração V1](../../../src/main/resources/db/migration/V1__tarefas_e_auditoria.sql) guarda `rev`, mas não possui `revend`.
+A configuração atual não define `org.hibernate.envers.audit_strategy`. Assim, usa a estratégia padrão da série 6.6, `DefaultAuditStrategy`. A [migração V1](../../src/main/resources/db/migration/V1__tarefas_e_auditoria.sql) guarda `rev`, mas não possui `revend`.
 
 **Implementado:** esquema e consultas da base padrão. **Proposto:** comparação com `ValidityAuditStrategy`. Não existe medição comparativa neste projeto.
 
@@ -67,4 +67,4 @@ Não migre um histórico preenchido apenas adicionando a coluna de fim e alteran
 - [Choosing an audit strategy](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-audit-strategy).
 - [Configuring the ValidityAuditStrategy](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-audit-ValidityAuditStrategy).
 
-[Anterior](../06-limites-e-cuidados/README.md) · [Índice](../README.md) · [Próximo: relacionamentos](../08-relacionamentos/README.md)
+[Anterior](06-limites-e-cuidados.md) · [Índice](README.md) · [Próximo: relacionamentos](08-relacionamentos.md)

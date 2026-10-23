@@ -10,15 +10,15 @@ Leia um tópico, faça o experimento e explique a resposta à pergunta final com
 
 | Ordem | Tópico | Pergunta principal | Tempo sugerido |
 |---|---|---|---|
-| 01 — essencial | [Fundamentos](01-fundamentos/README.md) | Histórico e controle de concorrência são a mesma coisa? | 15 min |
-| 02 — essencial | [Mapeamento e tabelas](02-mapeamento-e-tabelas/README.md) | Onde os dados históricos ficam e quais campos entram? | 20 min |
-| 03 — essencial | [Transações e revisões](03-transacoes-e-revisoes/README.md) | Cada clique, SQL ou entidade gera uma revisão? | 25 min |
-| 04 — essencial | [Consulta do histórico](04-consulta-do-historico/README.md) | Qual a diferença entre um evento e o estado em uma revisão? | 25 min |
-| 05 — essencial | [Autoria e metadados](05-autoria-e-metadados/README.md) | Quem alterou e como essa identidade chegou à auditoria? | 20 min |
-| 06 — essencial | [Limites e cuidados](06-limites-e-cuidados/README.md) | Quais caminhos de alteração escapam? | 20 min |
-| 07 — aprofundamento | [Estratégias de auditoria](07-estrategias-de-auditoria/README.md) | O que comparar antes de mudar a estratégia? | 25 min |
-| 08 — aprofundamento | [Relacionamentos](08-relacionamentos/README.md) | O histórico da tarefa aponta para qual versão da lista? | 25 min |
-| 09 — aprofundamento | [Adoção em produção](09-adocao-em-producao/README.md) | Quais decisões faltam para sair do laboratório? | 25 min |
+| 01 — essencial | [Fundamentos](01-fundamentos.md) | Histórico e controle de concorrência são a mesma coisa? | 15 min |
+| 02 — essencial | [Mapeamento e tabelas](02-mapeamento-e-tabelas.md) | Onde os dados históricos ficam e quais campos entram? | 20 min |
+| 03 — essencial | [Transações e revisões](03-transacoes-e-revisoes.md) | Cada clique, SQL ou entidade gera uma revisão? | 25 min |
+| 04 — essencial | [Consulta do histórico](04-consulta-do-historico.md) | Qual a diferença entre um evento e o estado em uma revisão? | 25 min |
+| 05 — essencial | [Autoria e metadados](05-autoria-e-metadados.md) | Quem alterou e como essa identidade chegou à auditoria? | 20 min |
+| 06 — essencial | [Limites e cuidados](06-limites-e-cuidados.md) | Quais caminhos de alteração escapam? | 20 min |
+| 07 — aprofundamento | [Estratégias de auditoria](07-estrategias-de-auditoria.md) | O que comparar antes de mudar a estratégia? | 25 min |
+| 08 — aprofundamento | [Relacionamentos](08-relacionamentos.md) | O histórico da tarefa aponta para qual versão da lista? | 25 min |
+| 09 — aprofundamento | [Adoção em produção](09-adocao-em-producao.md) | Quais decisões faltam para sair do laboratório? | 25 min |
 
 ## Antes dos experimentos
 
@@ -53,4 +53,4 @@ Referência principal: [capítulo 24 — Envers, Hibernate ORM 6.6](https://docs
 
 Esta é uma trilha priorizada, não um catálogo completo. Rastreamento de tipos de entidades alteradas, herança, mapeamentos especiais e particionamento detalhado podem ser estudados depois, conforme a necessidade.
 
-**Começar:** [01 — Fundamentos](01-fundamentos/README.md).
+**Começar:** [01 — Fundamentos](01-fundamentos.md).

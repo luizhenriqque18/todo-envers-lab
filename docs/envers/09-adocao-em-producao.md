@@ -19,7 +19,7 @@ O ToDo demonstra auditoria de uma entidade simples. Não valida a cobertura de o
 
 ## Onde a base atual ajuda
 
-O [pom.xml](../../../pom.xml) deixa a versão do Envers sob o gerenciamento do Spring Boot. A [migração V1](../../../src/main/resources/db/migration/V1__tarefas_e_auditoria.sql) mostra explicitamente as tabelas auditadas e o índice por revisão. O [application.properties](../../../src/main/resources/application.properties) usa `ddl-auto=validate`.
+O [pom.xml](../../pom.xml) deixa a versão do Envers sob o gerenciamento do Spring Boot. A [migração V1](../../src/main/resources/db/migration/V1__tarefas_e_auditoria.sql) mostra explicitamente as tabelas auditadas e o índice por revisão. O [application.properties](../../src/main/resources/application.properties) usa `ddl-auto=validate`.
 
 Esses elementos tornam a estrutura revisável. Não provam que o índice atual serve para toda consulta, que atualizar dependências preservará todos os comportamentos ou que uma migração funcionará com um histórico grande.
 
@@ -70,4 +70,4 @@ Uma resposta útil cita comportamentos demonstrados, requisitos ainda desconheci
 - [Understanding the Envers Schema](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-schema).
 - [Advanced: Audit table partitioning](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-partitioning).
 
-[Anterior](../08-relacionamentos/README.md) · [Índice](../README.md)
+[Anterior](08-relacionamentos.md) · [Índice](README.md)

@@ -4,7 +4,7 @@
 
 ## Use uma evolução pequena do ToDo
 
-Hoje, [Tarefa](../../../src/main/java/br/com/laboratorio/todo/tarefa/Tarefa.java) tem apenas campos simples. Não existe entidade `Lista`, associação JPA ou tabela de auditoria de lista. O roteiro a seguir é **proposto**, não uma funcionalidade da tela.
+Hoje, [Tarefa](../../src/main/java/br/com/laboratorio/todo/tarefa/Tarefa.java) tem apenas campos simples. Não existe entidade `Lista`, associação JPA ou tabela de auditoria de lista. O roteiro a seguir é **proposto**, não uma funcionalidade da tela.
 
 Imagine a seguinte sequência:
 
@@ -74,4 +74,4 @@ Explique qual requisito levaria a cada escolha e como um teste demonstraria a di
 - [Mapping exceptions](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-mappingexceptions).
 - [Configuração de mudanças de coleções](https://docs.hibernate.org/orm/6.6/userguide/html_single/#envers-configuration).
 
-[Anterior](../07-estrategias-de-auditoria/README.md) · [Índice](../README.md) · [Próximo: produção](../09-adocao-em-producao/README.md)
+[Anterior](07-estrategias-de-auditoria.md) · [Índice](README.md) · [Próximo: produção](09-adocao-em-producao.md)
